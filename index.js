@@ -1,3 +1,4 @@
+const { default: baskara } = require("./baskara.ts");
 const { default: calcular } = require("./calcular.ts");
 
-console.log(calcular(4, [1,2]))
+console.log(baskara(4, undefined, -16))
