@@ -1,3 +1,4 @@
-const sin = (val: number) => {
-  return Math.sin(val)*(Math.PI/180);
-};
+const sin = (val: number) =>  Math.sin(val)*(Math.PI/180);
+
+
+const cos = (val: number) =>  Math.cos(val)*(Math.PI/180);
