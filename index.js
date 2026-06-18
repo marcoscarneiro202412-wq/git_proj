@@ -1,5 +1,6 @@
 const { default: baskara } = require("./baskara.ts");
-const { default: calcular } = require("./calcular.ts");
+const { default: calcular } = require("./calcular.ts")
+const {cos, sin, tan} = require("./trigonometry.ts")
 
 const readline = require("readline").createInterface({
   input: process.stdin,
@@ -39,5 +40,29 @@ readline.question("Qual é a operação calcular ou bhaskara? ", (op) => {
         });
       });
     });
+  }
+  if(op == 2) {
+    readline.question("Sen, cos, tg? ", n => {
+        const opt = +n;
+        readline.question("Valor? ", n => {
+            const v = +n;
+            if(v === 0 || !opt) return;
+            switch(opt){
+                case 0:
+                    console.log(sin(v));
+                    break;
+                case 1:
+                    console.log(cos(v))
+                    break;
+                case 2:
+                    console.log(tan(v));
+                    break;
+                default:
+                    console.log("Ai é d+ po");
+                    break;8
+            }
+            readline.close();
+        })
+    })
   }
 });
