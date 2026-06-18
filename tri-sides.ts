@@ -4,7 +4,7 @@ interface triSidesInterface {
   c: number;
 }
 
-const triSide = (sides: triSidesInterface) => {
+export const triSide = (sides: triSidesInterface) => {
   const a = 4;
   const b = 7;
   const c = 9;
