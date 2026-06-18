@@ -2,10 +2,6 @@ const { default: baskara } = require("./baskara.ts");
 const { default: calcular } = require("./calcular.ts")
 const {cos, sin, tan} = require("./trigonometry.ts")
 
-<<<<<<< HEAD
-console.log(baskara(4, undefined, -16));
-console.log(calcular(1, baskara(4, 20, 16)));
-=======
 const readline = require("readline").createInterface({
   input: process.stdin,
   output: process.stdout,
@@ -70,4 +66,3 @@ readline.question("Qual é a operação calcular ou bhaskara? ", (op) => {
     })
   }
 });
->>>>>>> c5d64c8 (Revert "Asking sum")
