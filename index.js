@@ -17,7 +17,8 @@ readline.question("Qual é a operação calcular ou bhaskara? ", (op) => {
           if (a === 0 || (b === undefined && c === undefined)) {
             console.log("Poxa mn n sabe fzr n eh?");
           } else {
-            console.log(baskara(a, b, c));
+            const {delta, roots} = baskara(a,b,c);
+            console.log(delta, roots);
           }
           readline.close();
         });
