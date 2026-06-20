@@ -3,9 +3,15 @@ type BhaskaraResult = {
   delta: number;
 };
 
-const solveBhaskara = (a: number, b: number, c: number): BhaskaraResult => {
+export default function solveBhaskara(
+  a: number,
+  b: number,
+  c: number,
+): BhaskaraResult {
   if (a === 0) {
-    throw new Error('O coeficiente "a" deve ser diferente de zero para uma equação do 2º grau.');
+    throw new Error(
+      'O coeficiente "a" deve ser diferente de zero para uma equação do 2º grau.',
+    );
   }
 
   const delta = b ** 2 - 4 * a * c;
@@ -24,4 +30,4 @@ const solveBhaskara = (a: number, b: number, c: number): BhaskaraResult => {
   const roots = delta === 0 ? [root1] : [root1, root2].sort((x, y) => x - y);
 
   return { roots, delta };
-};
+}
