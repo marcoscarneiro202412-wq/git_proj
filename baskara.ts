@@ -1,10 +1,10 @@
 export default function baskara(
   a: number,
   b: number | undefined,
-  c: number | undefined,
+  c: number | undefined | null,
 ) {
   if (a === undefined) return null;
-
+  
   if (c === undefined && b !== undefined) {
     if (a === 0) return [0, undefined];
     return [0, (b * -1) / a];
@@ -21,5 +21,7 @@ export default function baskara(
       (b * -1 + Math.sqrt(delta)) / (2 * a),
       (b * -1 - Math.sqrt(delta)) / (2 * a),
     ];
+  } else {
+    return Math.infinite;
   }
 }
